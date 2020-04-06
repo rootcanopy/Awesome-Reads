@@ -21,7 +21,7 @@ wireframes
 >
 > As a user I wanted to be able to view all books available on the open market.
 >
-> As a user I wanted to be able to see a link to the book, I'm interested in buying
+> As a user I wanted to be able to save a link to the book, I'm interested in reading
 
 
 
@@ -37,10 +37,12 @@ what are the users of your project looking for
 
 ## **Technolgoies Used**
 
-
+Flask 
+MongoDB
+Foundation
 
 ## **Testing** 
-
+first test after setting up the backend failed - square brackets instead of round
 
 
 ## **Deployment**
