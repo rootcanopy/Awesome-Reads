@@ -42,18 +42,19 @@ MongoDB
 uikit
 
 ## **Testing** 
-first test after setting up the backend failed - square brackets instead of round
+first test after setting up the backend failed - square brackets instead of round on MONGO_URI
 
 
 ## **Deployment**
 
 
 
-## **Media**
-
-
+## **Media & Resources**
+// a rough guide 
+https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ii-templates
+// book logo
 https://www.freepnglogos.com/
-
+// the background image on landing page
 https://www.zastavki.com/eng/Photography/Photoshop/wallpaper-85544.htm
 
 
