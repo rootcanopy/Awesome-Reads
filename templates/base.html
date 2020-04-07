@@ -8,8 +8,23 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css" />
     <!-- Scripts -->
     <title>Awesome-Reads</title>
+
 </head>
+    <header class="head">
+
+
+    </header>
+
 <body>
+
+    {% for user in users %}
+    
+        {{ user.user_name }}
+        {{ user.email }}
+        {{ user.password }}
+
+    {% endfor %}
     
 </body>
+
 </html>
