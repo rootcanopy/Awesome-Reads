@@ -39,7 +39,7 @@ what are the users of your project looking for
 
 Flask 
 MongoDB
-Foundation
+uikit
 
 ## **Testing** 
 first test after setting up the backend failed - square brackets instead of round
@@ -53,6 +53,8 @@ first test after setting up the backend failed - square brackets instead of roun
 
 
 https://www.freepnglogos.com/
+
+https://www.zastavki.com/eng/Photography/Photoshop/wallpaper-85544.htm
 
 
 ## **Acknowledgements**
