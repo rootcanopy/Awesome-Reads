@@ -13,9 +13,16 @@ mongo = PyMongo(app)
 
 @app.route('/')
 @app.route('/main_page') # chnaged for setting up
-def main():
-    return render_template("base.html",
-                            users=mongo.db.users.find())
+def main_page():
+    return render_template("index.html")
+                            #users=mongo.db.users.find())
+
+@app.route('/user')
+#@login_required
+def user():
+    return render_template("user.html",
+                            user = mongo.db.user.find())
+    
 
 if __name__ == '__main__':
             app.run(host=os.environ.get('IP'),

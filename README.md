@@ -1,8 +1,8 @@
 # **Awesome-Reads** [books(./static/images/book-clipart.png)]
 
 This project is aimed at anyone who enjoys reading and talking about what they have read, 
-viewing books and saving them in a collection for future use,
-meeting new and interesting people who have read the same book as them, reviewing books,
+viewing & reviewing books, saving them in a library/list for future use,
+meeting new and interesting people who have read the same book as them, 
 finding new books and Authors, reading qoutes from books they are interested in.
 
 ## **UX**
@@ -11,17 +11,17 @@ wireframes
 
 ## **User Stories**
 
-> As a user I wanted to be able to save the books I wanted to read in the future.
+> As a user I want to be able to save the books I wanted to read in the future.
 >
-> As a user I wanted to be able to like books that I'm interest in.
+> As a user I want to be able to like books that I'm interest in.
 >
-> As a user I wanted to be able to make a list of books I've already read.
+> As a user I want to be able to make a list of books I've already read.
 >
-> As a user I wanted to be able to make a profile.
+> As a user I want to be able to make a profile.
 >
-> As a user I wanted to be able to view all books available on the open market.
+> As a user I want to be able to view all books available on the open market.
 >
-> As a user I wanted to be able to save a link to the book, I'm interested in reading
+> As a user I want to be able to save a link to the book, I'm interested in reading
 
 
 
