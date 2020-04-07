@@ -1,47 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--- Links --->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}" type="text/css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/css/uikit.min.css" />
-    <!-- Scripts -->
-    <script defer href="{{ url_for('static', filename='js/main.js') }}" type="text/js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/js/uikit.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/js/uikit-icons.min.js"></script>
-    <title>Awesome-Reads</title>
+    
+    <title>{{ title }} - Awesome-Reads</title>
 
 </head>
 
 <body>
+
     <header class="head">
+        {% block nav %}
         <!-- Nav-Bar -->
         <nav class="uk-navbar-container" uk-navbar>
+            <!-- Items Position -->
             <div class="uk-navbar-right">
                 <!-- Nav Items-->
                 <ul class="uk-navbar-nav">
-                    <li class="uk-active"><a href="{{ url_for('main_page') }}">Home</a></li>
+                    <li class="uk-active"><a href="{{ url_for ('home') }}">Home</a></li>
                     <li class="uk-parent"><a href="">Books</a></li>
-                    <li class="uk-parent"><a href="{{ url_for('user') }}">User</a></li>
-                    <li class="uk-parent"><a href="">Login</a></li>
-                    <li><a href=""></a></li>
+                    <li class="uk-parent"><a href="{{ url_for ('user') }}">User</a></li>
+                    <li class="uk-parent"><a href="{{ url_for('login') }}">Login</a></li>
+                    <li class="uk-parent"><a href="">Register</a></li>
+                    <li><a href="#!"></a></li>
                 </ul>
             </div>
-        </nav>
+        </nav> 
+        {% endblock %}
     </header>
 
-    <img src="https://www.zastavki.com/pictures/640x480/2014/Photoshop_____The_letters_flying_out_of_the_book_085544_29.jpg" height=100% width=100%>
+    <img src="https://www.zastavki.com/pictures/640x480/2014/Photoshop_____The_letters_flying_out_of_the_book_085544_29.jpg"
+        height=100% width=100%>
 
-    {% block content %}
-
-    {% endblock %}
-    
     <footer>
 
 
     </footer>
+
+    <!-- Scripts-->
+    <script defer href="{{ url_for('static', filename='js/main.js') }}" type="text/js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/js/uikit.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/js/uikit-icons.min.js"></script>
 
 </body>
 
