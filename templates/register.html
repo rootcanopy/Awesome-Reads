@@ -4,12 +4,12 @@
 
     <div class="container">
 
-        <form method="POST" action="">
+        <form method="POST" action="/">
         <!-- THIS IS FOR CSRF, TOKEN IN ENV -->
-            {{ form.csrf_token }}
+            {{ form.hidden_tag() }}
             <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Sign Up!</legend>
-                <!-- User Input UN-->
+                <legend class="border-bottom mb-4">Join Today!</legend>
+                <!-- User Input U_NAME-->
                     <div class="form-group">
                         {{ form.username.label(class="form-control-label") }}
                         {{ form.username(class="form-control from-control-lg") }}

@@ -44,6 +44,8 @@ uikit
 ## **Testing** 
 first test after setting up the backend failed - square brackets instead of round on MONGO_URI
 
+registration form not rendering on the page.
+
 
 ## **Deployment**
 
@@ -52,11 +54,16 @@ first test after setting up the backend failed - square brackets instead of roun
 ## **Media & Resources**
 // a rough guide 
 https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ii-templates
+
 // book logo
 https://www.freepnglogos.com/
+
 // the background image on landing page
 https://www.zastavki.com/eng/Photography/Photoshop/wallpaper-85544.htm
 
+//web template
+http://themehunt.com/item/1525828-writer-free-ecommerce-book-store-template/preview
+https://webflow.com/free-website-templates
 
 ## **Acknowledgements**
 

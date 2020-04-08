@@ -5,33 +5,51 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    #TODO
     <!--- Links --->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!--<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" /> -->
-    
-    
+            
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" type="text/css" />
+
+
     <title>{{ title }}</title>
 
 </head>
 
 <body>
 
-    <header class="head-site">
-        {% block navbar %}
-        <!-- Nav-Bar -->
-            <nav class="nav-nav">
-                <!-- Nav Items-->
-                <ul class="nav">
-                    <li class="uk-active"><a href="{{ url_for ('home') }}">Home</a></li>
-                    <li class="uk-parent"><a href="">Books</a></li>
-                    <li class="uk-parent"><a href="{{ url_for ('user') }}">User</a></li>
-                    <li class="uk-parent"><a href="{{ url_for ('login') }}">Login</a></li>
-                    <li class="uk-parent"><a href="{{ url_for ('register') }}">Register</a></li>
-                    <li><a href="#!"></a></li>
-                </ul>
-            </nav>
-        </nav> 
-        {% endblock %}
+    <header class="header-first">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 col-sm-12 hidden-xs">
+                    <div class="header-logo">
+                        <a href="{{ url_for ('home') }}">
+                            <img src="{{'static', filename='images/book-clipart.png') }}">
+                        </a>
+                    </div>
+                    <!-- Nav-Bar -->
+                    <nav class="text-center">
+                        <!-- Nav Items-->
+                        <ul id="nav">
+                            <li><a href="{{ url_for ('home') }}">Home</a></li>
+
+                            <li><a href="{{ url_for ('top-books') }}">Top Books</a></li>
+
+                            <li><a href="{{ url_for ('user') }}">User</a></li>
+
+                            <li><a href="{{ url_for ('login') }}">Login</a></li>
+
+                            <li><a href="{{ url_for ('register') }}">Register</a></li>
+
+                            <li><a href="{{ url_for ('my_library') }}">My Library</a></li>
+
+                            <li><a href="{{ url_for ('my_wishlist') }}">My Wishlist</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
     </header>
 
     <!--<img src="https://www.zastavki.com/pictures/640x480/2014/Photoshop_____The_letters_flying_out_of_the_book_085544_29.jpg"
@@ -42,10 +60,13 @@
 
     </footer>
 
-    <!-- Scripts-->
+    <!-- MY JS FILE -->
     <script href="{{ url_for('static', filename='js/main.js') }}" type="text/js"></script>
+    <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!-- JS POPPERS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <!-- JS BS -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </body>
