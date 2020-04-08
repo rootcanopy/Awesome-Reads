@@ -39,12 +39,18 @@ what are the users of your project looking for
 
 Flask 
 MongoDB
-uikit
+Bootstrap
+PipEnv - dont forget lockfile
+YouTube
+VsCode <3
+& ATOM
 
 ## **Testing** 
 first test after setting up the backend failed - square brackets instead of round on MONGO_URI
 
 registration form not rendering on the page.
+
+I swapped over to ATOM on my machine to try debug the books.py file but no joy
 
 
 ## **Deployment**
