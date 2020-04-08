@@ -1,9 +1,37 @@
-{
-    // See https://go.microsoft.com/fwlink/?LinkId=733558
-    // for the documentation about the tasks.json format
-    "version": "2.0.0",
-    "command": "python3",
-    "ShellCommand": true,
-    "args": ["${fileBasename}"],
-    "reveal": "always"
+       // See https://go.microsoft.com/fwlink/?LinkId=733558
+        // for the documentation about the tasks.json format
+{    
+
+        {   
+            "version": "2.0.0",
+            "command": "/home/dave/python-environ/python",
+            "isShell": true,
+            "args": ["${fileBasename}"],
+            "reveal": "always",
+            
+            
+            "python.pythonPath": "/home/dave/python-environ/python",
+            "editor.formatOnPaste": true,
+            "editor.formatOnSave": true,
+            "python.formatting.provider": "autopep8",
+            "python.formatting.autopep8Path": "/home/dave/python-enviroautopep8",
+            "python.formatting.autopep8Args": [
+              "--max-line-length",
+            "70",
+              "--aggressive",
+            ],
+            "python.linting.lintOnSave": true,
+            "python.linting.enabled": true,
+            "python.linting.pylintEnabled": true,
+            "python.linting.pylintPath": "/home/dave/python-enviro/pylint",
+            "python.linting.pylintArgs": [
+              "--load-plugins",
+              "pylint_flask", // only if you are using django framework
+              "--enable=W0614",
+              "--enable= W0611"
+            ],
+            "[python]": {
+              "editor.tabSize": 4
+            },
+        
 }
