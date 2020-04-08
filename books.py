@@ -21,16 +21,20 @@ mongo = PyMongo(app)
 
 # MAIN PAGE
 @app.route('/')
-@app.route('/home') # chnaged for setting up
+def base():
+    return render_template('base.html')
+                            
+
+@app.route('/home')
 def home():
     return render_template('home.html', title='Awesome-Reads')
-                            #users=mongo.db.users.find())
+
 
 @app.route('/user/<username>')
 #@login_required
 def user(username):
     users = mongo.db.users.find_one()
-    return render_template('user.html', user=user, title='Profile')
+    return render_template('my_profile.html', user=user, title='Profile')
                             
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -38,7 +42,7 @@ def register():
     form = RegistrationForm()
     if form.validate_on_submit():
         flash(f'Account created for {form.username.data}!', 'success')
-        return redirect(url_for('home'))
+        return redirect(url_for('home.html'))
     #return render_template('user.html', title='Register', form=form)
 
 
@@ -47,7 +51,7 @@ def login():
     form = LoginForm()
     if form.validate_on_submit():
         flash(f'Welcome Back {form.username.data}, theres loads of new books to enjoy!', 'success')
-        return redirect(url_for('home')) 
+        return redirect(url_for('home.html')) 
     else:
         flash('Login Failed. Check yo\'self', 'danger')
         return render_template('login.html', title='Login', form=form)
