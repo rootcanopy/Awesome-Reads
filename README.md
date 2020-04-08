@@ -68,8 +68,7 @@ https://www.freepnglogos.com/
 https://www.zastavki.com/eng/Photography/Photoshop/wallpaper-85544.htm
 
 //web template
-http://themehunt.com/item/1525828-writer-free-ecommerce-book-store-template/preview
-https://webflow.com/free-website-templates
+https://templated.co/
 
 ## **Acknowledgements**
 
