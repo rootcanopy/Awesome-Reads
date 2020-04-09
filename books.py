@@ -22,7 +22,7 @@ mongo = PyMongo(app)
 # MAIN PAGE
 @app.route('/')
 def base():
-    return render_template('base.html')
+    return render_template('base.html', title='Awesome-Reads')
                             
 
 @app.route('/home')
@@ -43,7 +43,9 @@ def register():
     if form.validate_on_submit():
         flash(f'Account created for {form.username.data}!', 'success')
         return redirect(url_for('home.html'))
-    #return render_template('user.html', title='Register', form=form)
+    else:
+        flash('Registration Failed. Check yo\'self', 'danger')
+        return render_template('register.html', title='Registration', form=form)
 
 
 @app.route('/login', methods=['GET', 'POST'])

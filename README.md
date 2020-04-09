@@ -52,6 +52,8 @@ registration form not rendering on the page.
 
 I swapped over to ATOM on my machine to try debug the books.py file but no joy
 
+During development I've encountered quite a few errors, namely with Jinja down to my own syntax.
+
 
 ## **Deployment**
 
