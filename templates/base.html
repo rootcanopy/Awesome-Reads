@@ -27,14 +27,27 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-light bg-steele static-top">
-    <div class="container">
-      <a class="navbar-brand" href="{{ url_for('home') }}">Awesome-Reads</a>
-      <a class="btn btn-primary" href="{{ url_for('login') }}">Login</a>
-      <a class="btn btn-primary" href="{{ url_for('register') }}">Register</a>
-    </div>
-  </nav>
-{% block content %} {% endblock %}
+  <header class="site-header">
+      <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+        <div class="container">
+          <a class="navbar-brand mr-4" href="/">Awesome-Reads</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarToggle">
+            <div class="navbar-nav mr-auto">
+              <a class="nav-item nav-link" href="{{ url_for('home') }}">Home</a>
+              <a class="nav-item nav-link" href="">About</a>
+            </div>
+            <!-- Navbar Right Side -->
+            <div class="navbar-nav">
+              <a class="nav-item nav-link" href="{{ url_for('login') }}">Login</a>
+              <a class="nav-item nav-link" href="{{ url_for('register') }}">Register</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
   
   <!--- Masthead -->
   <header class="masthead text-white text-center">
@@ -62,7 +75,23 @@
     </div>
   </header>
 
-    
+<!-- RETURNED MESSAGES FROM REGISTRATION FORM 
+<section class="container">
+    <div class="row">
+        <div class="col-md-8">
+          {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+              {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                  {{ message }}
+                </div>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
+          {% block content %}{% endblock %}
+        </div>
+    </div>
+</section> -->
  
   <!-- Icons Grid -->
   <section class="features-icons bg-light text-center">
