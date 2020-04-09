@@ -5,11 +5,12 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
 
-  <title>Landing Page - Start Bootstrap Theme</title>
-
+{% if title %}
+    <title>Awesome-Reads - {{ title }} </title>
+{% else %}
+    <title>Awesome-Reads </title>
+{% endif %}
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/css/bootstrap.css" integrity="sha256-pok3KZeHPJvZi4o04UfObTBGUAIkwF/zZWbh+UuKaoE=" crossorigin="anonymous" />
 
@@ -26,28 +27,30 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-light bg-dark static-top">
+  <nav class="navbar navbar-light bg-steele static-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Awesome-Reads</a>
+      <a class="navbar-brand" href="{{ url_for('home') }}">Awesome-Reads</a>
       <a class="btn btn-primary" href="{{ url_for('login') }}">Login</a>
       <a class="btn btn-primary" href="{{ url_for('register') }}">Register</a>
     </div>
   </nav>
-
+{% block content %} {% endblock %}
+  
   <!--- Masthead -->
   <header class="masthead text-white text-center">
     <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-9 mx-auto">
-          <h1 class="mb-5"></h1>
-        </div>
-        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 mx-auto">
+                    <h1 class="mb-5"></h1>
+                </div>
+
+                <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
         <!-- FORM FOR SEARCH -->
           <form>
             <div class="form-row">
               <div class="col-12 col-md-9">
-                <input type="search" id="search" class="form-control form-control-lg" placeholder="Enter your email...">
+                <input type="search" id="search" class="form-control form-control-lg" placeholder="Search Quotes...">
               </div>
               <div class="col-12 col-md-3">
                 <button type="submit" class="btn btn-block btn-lg btn-primary">Search</button>
@@ -59,6 +62,7 @@
     </div>
   </header>
 
+    
  
   <!-- Icons Grid -->
   <section class="features-icons bg-light text-center">

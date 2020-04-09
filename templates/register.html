@@ -5,8 +5,8 @@
     <div class="container">
 
         <form method="POST" action="/">
-        <!-- THIS IS FOR CSRF, TOKEN IN ENV -->
-            {{ form.hidden_tag() }}
+        <!-- THIS IS FOR CSRF, TOKEN IN ENV, SECURITY FOR USER LOGIN-->
+        {{ form.hidden_tag() }}
             <fieldset class="form-group">
                 <legend class="border-bottom mb-4">Join Today!</legend>
                 <!-- User Input U_NAME-->
