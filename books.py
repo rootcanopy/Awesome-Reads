@@ -34,7 +34,7 @@ def home():
 #@login_required
 def user(username):
     users = mongo.db.users.find_one()
-    return render_template('my_profile.html', user=user, title='Profile')
+    return render_template('user.html', user=user, title='Profile')
                             
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -50,6 +50,7 @@ def register():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    users = mongo.db.users.find_one()
     form = LoginForm()
     if form.validate_on_submit():
         flash(f'Welcome Back {form.username.data}, theres loads of new books to enjoy!', 'success')
