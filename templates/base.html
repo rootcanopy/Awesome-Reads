@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 {% if title %}
-    <title>Awesome-Reads - {{ title }} </title>
+    <title>{{ title }} - Awesome-Reads </title>
 {% else %}
     <title>Awesome-Reads </title>
 {% endif %}
@@ -38,8 +38,19 @@
           <div class="collapse navbar-collapse" id="navbarToggle">
             <!-- Navbar Right Side -->
             <div class="navbar-nav mr-auto">
+            <!-- navbar options for user both member and not -->
+
+            {% if 'username' not in session %}
+
+              <a class="nav-item nav-link" href="{{ url_for('books') }}">Books</a>
               <a class="nav-item nav-link" href="{{ url_for('login') }}">Login</a>
               <a class="nav-item nav-link" href="{{ url_for('register') }}">Register</a>
+
+              {% else %}
+              <a class="nav-item nav-link" href="{{ url_for('home') }}">Home</a>
+              <a class="nav-item nav-link" href="{{ url_for('user') }}">My Profile</a>
+              
+            {% endif %}
             </div>
           </div>
         </div>
@@ -76,7 +87,9 @@
 <section class="container">
     <div class="row">
         <div class="col-md-8">
+        <!-- success category returned on regis. form-->
           {% with messages = get_flashed_messages(with_categories=true) %}
+          <!-- the success / danger messages -->
             {% if messages %}
               {% for category, message in messages %}
                 <div class="alert alert-{{ category }}">

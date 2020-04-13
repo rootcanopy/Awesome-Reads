@@ -56,6 +56,8 @@ During development I've encountered quite a few errors, namely with Jinja down t
 
 Failed to push to Heroku
 
+source /home/dave/python-enviro/bin/activate
+
 
 ## **Deployment**
 
@@ -79,42 +81,6 @@ https://templated.co/
 
 
 ### sources
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
