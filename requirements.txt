@@ -19,7 +19,7 @@ cupshelpers==1.0
 defer==1.0.6
 distlib==0.3.0
 distro-info===0.18ubuntu0.18.04.1
-Django==3.0.4
+Django==3.1.12
 dnspython==1.16.0
 dominate==2.5.1
 filelock==3.0.12
